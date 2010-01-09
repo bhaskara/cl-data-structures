@@ -36,7 +36,8 @@ Return an empty priority-queue"
 (defun peek-highest (pq)
   "peek-highest PQ.  Return the highest priority element of PQ without removing it.  Signals error if PQ is empty."
   (assert (> (length pq) 0) nil "Attempted to call peek-highest on empty priority queue.")
-  (aref pq 0))
+  (values (item (aref pq 0)) (priority (aref pq 0))))
+		
 
 (defun enqueue (pq item priority)
   "enqueue PQ ITEM PRIORITY.  Add a new entry to the PQ.  PRIORITY may be an extended real."
