@@ -1,1 +1,3 @@
 Some standard data structures implemented in Common Lisp
+
+Requires cl-extended-reals (git@github.com:bhaskara/cl-extended-reals.git) and cl-utils (git@github.com:bhaskara/cl-utils.gi)

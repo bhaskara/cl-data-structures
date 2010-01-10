@@ -5,5 +5,5 @@
 (defsystem :data-structures
   :components
   ((:file "priority-queue"))
-  :depends-on ("extended-reals"))
+  :depends-on ("extended-reals" "cl-utils"))
   
