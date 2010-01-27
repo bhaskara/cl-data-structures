@@ -25,6 +25,9 @@ num-entries")
   priority)
 
 
+(deftype priority-queue ()
+  'vector)
+
 (defun make-priority-queue ()
   "make-priority-queue
 Return an empty priority-queue"
@@ -34,7 +37,7 @@ Return an empty priority-queue"
   (length pq))
 
 (defun peek-highest (pq)
-  "peek-highest PQ.  Return the highest priority element of PQ without removing it.  Signals error if PQ is empty."
+  "peek-highest PQ.  Return the highest priority element of PQ without removing it, and its priority.  Signals error if PQ is empty."
   (assert (> (length pq) 0) nil "Attempted to call peek-highest on empty priority queue.")
   (values (item (aref pq 0)) (priority (aref pq 0))))
 		
